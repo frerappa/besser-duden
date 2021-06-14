@@ -1,9 +1,86 @@
+@import url(../../utils/styles.css);
+
+
+h1 {
+    font-size: 50; 
+    color: var(--blackColor);
+    grid-row: 2;
+}
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 93vh;
+} */
+.content {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100vw;
+    min-height: 93vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.box {
+    background-color: var(--greyboxColor);
+    width: 70vw;
+    height: 40vh;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto auto 30%;
+    align-items: center;
+    justify-content: center;
+}
+
 .textinput-div {
-    width: 30vw;
+    background-color: var(--backgroundColor);
+    grid-row: 3;
+    flex-wrap:nowrap;
+    display: grid;
+    grid-template-columns: 25vw 100px;
 }
 
 .textinput {
     background: 0;
+    height: 50px;
     border: none;
     outline: none;
+    font-size: 25px;
 }
+
+.textinput-button {
+    border: none;
+    background: 0;
+    background-color: var(--yellowColor);
+    margin: 5px;
+    grid-column: 2;
+    left: 0px;
+}
+
+
+@media (max-width: 1250px){
+    .box {
+        width: 95vw;
+        height: 60vh;
+    }
+
+    .textinput-div {
+        grid-row: 3;
+        flex-wrap:nowrap;
+        display: grid;
+        grid-template-columns: 70vw 100px;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .textinput-div {
+        grid-template-columns: 70vw 60px;
+    }
+}
+

@@ -1,0 +1,10 @@
+:root {
+    /* Colors */
+    --backgroundColor: #ffffff;
+    --greyboxColor: #eff3f5;
+    --yellowColor: #ffd008;
+    --lightYellowColor: #fff6d0;
+    --blackColor: #383c33;
+    /* Font */
+    --textFontSize: 10;
+  }

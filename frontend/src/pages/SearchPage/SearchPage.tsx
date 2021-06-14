@@ -6,19 +6,21 @@ import './SearchPage.css'
 const SearchPage = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
-		<div >
+		<div>
 			<Navbar/>
-			<div style={{backgroundColor: COLORS.greybox}}>
-				<div>
-					<h1 style={{fontSize: FONT.fontSize, color: COLORS.black}}>Wörterbuch</h1>
+			<div className="content">
+
+				<div className="box">
+					<h1>Wörterbuch</h1>
 					<div className="textinput-div">
 						<input
 							type="text"
 							value={searchTerm}
 							onChange={event => {setSearchTerm(event.target.value)}}
 							className="textinput"
+							placeholder="Stichwort"
 						/>
-						<button>Suchen</button>
+						<button className="textinput-button" onClick={() => {console.log(searchTerm)}}>SUCHEN</button>
 					</div>
 				
 				</div>
